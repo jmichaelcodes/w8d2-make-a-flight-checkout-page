@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,fetch,Array.prototype.includes"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/default.date.css" />
+    <link rel="stylesheet" href="css/creditly.css" />
+    <link rel="stylesheet" href="css/radios-to-slider.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Soarin'</h1>
+        <p>Fly Higher</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+    </div>
+
+
+
+
+    <div class="container text-center">
+
+        <h1 class="text-center">Dates</h1>
+        <input class="datepicker text-center" id="departureField" type="text" placeholder="Departure Date" required>
+        <span></span>
+        <input class="datepicker text-center" id="arrivalField" type="text" placeholder="Arrival Date" required>
+        <br/> <br/>
+
+        <h1 class="text-center">Locations</h1>
+
+        <input class="placePicker text-center" type="text" id="departureCity" placeholder="Departure City">
+        <br/>
+        <input class="placePicker text-center" type="text" id="arrivalCity" placeholder="Arrival City">
+
+        <br/><br/><br/>
+
+        <h1 class="text-center">Price</h1>
+
+        <div id="radios" name="radioName">
+            <input id="option2" name="options" type="radio">
+            <label for="option2">$200</label>
+            <input id="option3" name="options" type="radio">
+            <label for="option3">$400</label>
+            <input id="option4" name="options" type="radio" checked>
+            <label for="option4">$600</label>
+            <input id="option5" name="options" type="radio">
+            <label for="option5">$800</label>
+            <input id="option6" name="options" type="radio">
+            <label for="option6">$100</label>
+        </div>
+
+
+        <section class="creditly-wrapper gray-theme">
+            <h3>Credit Card</h3>
+            <i>
+    <div class="card-type" style="text-align:right;margin-top:10px;margin-right:10px;min-height:20px;margin-bottom:-15px"></div>
+  </i>
+            <div class="credit-card-wrapper">
+                <div class="first-row form-group">
+                    <div class="col-sm-8 controls">
+                        <label class="control-label">Card Number</label>
+                        <input class="number credit-card-number form-control" type="text" name="number" pattern="\d*" inputmode="numeric" autocomplete="cc-number" autocompletetype="cc-number" x-autocompletetype="cc-number" placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
+                    </div>
+                    <div class="col-sm-4 controls">
+                        <label class="control-label">CVV</label>
+                        <input class="security-code form-control" · inputmode="numeric" pattern="\d*" type="text" name="security-code" placeholder="&#149;&#149;&#149;">
+                    </div>
+                </div>
+                <div class="second-row form-group">
+                    <div class="col-sm-8 controls">
+                        <label class="control-label">Name on Card</label>
+                        <input class="billing-address-name form-control" type="text" name="name" placeholder="John Smith">
+                    </div>
+                    <div class="col-sm-4 controls">
+                        <label class="control-label">Expiration</label>
+                        <input class="expiration-month-and-year form-control" type="text" name="expiration-month-and-year" placeholder="MM / YY">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <button type="button" class="btn btn-success" id="showModalButton">Let's Book It!</button>
+
+        <br/><br/>
+
+    </div>
+
+    <div class="overlay-background hidden" id="modal">
+        <div class="overlay">
+            <h1>Let's Book It!</h1>
+            <p id="modalText"></p>
+            <div class="text-center">
+                <button type="button" class="btn btn-success" id="hideModalButton">Confirm</button>
+            </div>
+            <input[type=text] (Credit Card) with data-grouplength="4" and pattern="[0-9]*" />
+        </div>
+    </div>
+
+    <div class="overlay-background hidden" id="modal2">
+        <div class="overlay">
+            <h1>Your flight has been booked!</h1>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+
+    </script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+    <script src="js/geocomplete.min.js"></script>
+    <script type="text/javascript" src="js/creditly.js"></script>
+    <script src="js/jquery.radios-to-slider.min.js"></script>
+    <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js"></script>
+    <script src="js/picker.js"></script>
+    <script src="js/picker.date.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
